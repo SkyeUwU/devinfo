@@ -97,7 +97,7 @@ b a {
     opacity: 1;
 }
 
-@media only screen and (min-width: 390px) {
+@media only screen and (max-width: 390px) {
     main {
         width: 100%
     }
