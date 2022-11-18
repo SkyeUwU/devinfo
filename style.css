@@ -83,6 +83,7 @@ b a {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-top: 8px;
 }
 
 .socials img {
