@@ -79,7 +79,7 @@ b a {
 
 .socials {
     display: inline-grid;
-    grid-template-columns: 35px 1fr 35px;
+    grid-auto-flow: column dense;
     align-items: center;
     justify-content: center;
     gap: 8px;
