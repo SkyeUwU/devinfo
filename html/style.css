@@ -19,7 +19,8 @@ body {
 
 .container {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: absolute;
     background-color: var(--bc-color);
     background-position: center;
     background-repeat: no-repeat;
