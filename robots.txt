@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /users/*
+
+User-agent: *
+Disallow: /login/*
+
+User-agent: *
+Allow: /docs/commands/
+
+User-agent: *
+Allow: /docs/*
+
+User-agent: facebookexternalhit
+Disallow: *
+
+User-agent: Yandex
+Disallow: *
+
+User-agent: YandexBot
+Disallow: *
+
+User-agent: *
+crawl-delay: 25
+
+Sitemap: https://skyethebot.xyz/sitemap.xml
