@@ -1,3 +1,5 @@
 # devinfo
-A webpage with the infos about SkyeTheBot's dev (me)<br>
-https://dev.skyethebot.xyz/
+
+A webpage with short info about me
+
+[dev.skyethebot.xyz](https://dev.skyethebot.xyz)
