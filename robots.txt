@@ -1,14 +1,8 @@
 User-agent: *
-Disallow: /users/*
+Allow: /
 
 User-agent: *
-Disallow: /login/*
-
-User-agent: *
-Allow: /docs/commands/
-
-User-agent: *
-Allow: /docs/*
+Disallow: /docs/*
 
 User-agent: facebookexternalhit
 Disallow: *
@@ -21,5 +15,3 @@ Disallow: *
 
 User-agent: *
 crawl-delay: 25
-
-Sitemap: https://skyethebot.xyz/sitemap.xml
