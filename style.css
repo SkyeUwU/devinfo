@@ -75,15 +75,17 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 16px;
-    padding: 24px;
+    padding: 16px;
     overflow-y: auto;
 }
 
 .boxes {
     width: 550px;
-    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -260,10 +262,6 @@ b a {
 @media only screen and (max-width: 550px) {
     html {
         font-size: 1rem;
-    }
-
-    .boxes {
-        width: 100%
     }
 
     .avatar {
