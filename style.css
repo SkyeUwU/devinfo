@@ -1,10 +1,46 @@
 :root {
-    --model-bc: hsl(0, 0%, 20%);
+    --model-bc: hsl(261, 11%, 22%);
     --main-color: hsl(356, 88%, 90%);
-    --sec-color: hsl(260, 80%, 72%);
-    --border-color: hsl(260, 19%, 50%);
-    --bc-color: hsl(0, 0%, 10%);
+    --sec-color: hsl(260, 19%, 60%);
+    --border-color: hsl(260, 19%, 60%);
+    --bc-color: hsl(261, 11%, 15%);
     --h1-color: hsl(260, 19%, 60%);
+}
+
+/* width */
+/* Common styles for both horizontal and vertical scrollbars */
+::-webkit-scrollbar {
+    width: 24px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 8px solid transparent;
+    background: var(--sec-color);
+    border-radius: 100px;
+    background-clip: padding-box;
+}
+
+/* Mozilla (Firefox) scrollbar styles */
+/* Similar to webkit-scrollbar styles */
+/* ... */
+
+/* Text selection styles */
+::-moz-selection {
+    color: white !important;
+    background-color: var(--sec-color) !important;
+    box-sizing: border-box !important;
+}
+
+::selection {
+    color: white !important;
+    background-color: var(--sec-color) !important;
+    box-sizing: border-box !important;
 }
 
 html {
@@ -16,7 +52,8 @@ html {
 
 html,
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -27,64 +64,63 @@ body {
 body {
     width: 100vw;
     height: 100vh;
+    background-color: #3d3846;
+    background-image: radial-gradient(var(--h1-color) 1.25px, transparent 1.25px), radial-gradient(var(--h1-color) 1.25px, var(--bc-color) 1.25px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
 }
 
 .container {
     width: 100%;
     height: 100%;
-    position: absolute;
-    background-color: var(--bc-color);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    overflow-y: auto;
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    filter: blur(4px);
-    background-image: url(src/desktop_background.webp);
-    opacity: 0.5;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-main {
+.boxes {
+    width: 550px;
     margin: auto;
-    width: 450px;
-    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.box {
+    width: 100%;
+    height: fit-content;
     background-color: var(--model-bc);
-    border-radius: 16px;
-    border-style: solid;
-    border-color: var(--border-color);
-    border-width: 2px;
+    border-radius: 9% 11% 6% 9% / 16% 11% 24% 19%;
+    outline-style: dashed;
+    outline-color: var(--border-color);
+    outline-width: 2px;
+    outline-offset: -8px;
     text-align: center;
-    padding: 16px;
+    padding: 24px;
     padding-top: 4px;
-    margin: 8px;
     overflow: unset;
     z-index: 1;
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
+    overflow: unset;
 }
 
 h1 {
-    font-size: 1.05em;
+    font-size: 1.2em;
     margin: 4px;
+    margin-top: 8px;
     color: var(--h1-color);
 }
 
 hr {
-    border: 1px solid var(--border-color);
-    background-color: var(--border-color);
-    opacity: 1;
+    border: none;
+    border-top: 2px dashed var(--border-color);
+    background-color: transparent;
+    opacity: 0.5;
 }
 
 a,
@@ -113,16 +149,18 @@ b a {
     text-align: left;
     gap: 8px;
     line-height: 24px;
-    margin-top: -8px;
+}
+
+.description .info p {
+    margin-top: 0;
 }
 
 .avatar {
     width: 124px;
     height: 124px;
-    background-color: hsla(0, 0%, 0%, 0.15);
-    border-radius: 12px;
+    background-color: hsla(0, 0%, 100%, 0.15);
+    border-radius: 24px;
     user-select: none;
-    margin-top: 12px;
 }
 
 *:is(a, b, h1)::selection {
@@ -153,14 +191,14 @@ b a {
     border-radius: 12px;
     border-color: hsla(0, 0%, 100%, 0.5);
     border-width: 2px;
-    border-style: solid;
+    border-style: dashed;
     position: relative;
 }
 
 .socials a::after {
     content: attr(data-dropdown);
     position: absolute;
-    background-color: hsl(260, 40%, 50%);
+    background-color: hsl(260, 25%, 60%);
     color: white;
     white-space: nowrap;
     padding: 4px 8px 4px 8px;
@@ -178,7 +216,7 @@ b a {
     position: absolute;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid hsl(260, 40%, 50%);
+    border-bottom: 10px solid hsl(260, 25%, 60%);
     bottom: -15px;
     left: 50%;
     opacity: 0;
@@ -214,16 +252,17 @@ b a {
 
 .socials a:hover {
     filter: saturate(1);
-    border-color: hsl(260, 80%, 72%);
+    border-color: hsl(260, 19%, 60%);
     background-color: hsla(260, 81%, 72%, var(--opacity));
+    border-style: solid;
 }
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 550px) {
     html {
         font-size: 1rem;
     }
 
-    main {
+    .boxes {
         width: 100%
     }
 
@@ -239,5 +278,6 @@ b a {
 
     .description {
         line-height: 20px;
+        flex-direction: column;
     }
 }
