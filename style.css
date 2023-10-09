@@ -66,7 +66,7 @@ body {
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #3d3846;
+    background-color: var(--bc-color);
     background-image: radial-gradient(var(--h1-color) 1.25px, transparent 1.25px), radial-gradient(var(--h1-color) 1.25px, var(--bc-color) 1.25px);
     background-size: 50px 50px;
     background-position: 0 0, 25px 25px;
