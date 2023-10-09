@@ -172,10 +172,10 @@ b a {
 }
 
 .socials {
-    display: inline-grid;
-    grid-auto-flow: column dense;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
     margin-top: 8px;
 }
