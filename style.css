@@ -64,8 +64,8 @@ body {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    height: 100dvh;
+    width: 100dvw;
     background-color: var(--bc-color);
     background-image: radial-gradient(var(--h1-color) 1.25px, transparent 1.25px), radial-gradient(var(--h1-color) 1.25px, var(--bc-color) 1.25px);
     background-size: 50px 50px;
@@ -73,14 +73,15 @@ body {
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    height: 100dvh;
+    width: 100dvw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 16px;
     padding: 16px;
+    overflow: hidden;
     overflow-y: auto;
 }
 
@@ -110,6 +111,7 @@ body {
     box-shadow: 0px 0px 34px -8px var(--shadow);
     box-sizing: border-box;
     overflow: unset;
+    transition: border-radius 250ms;
 }
 
 h1 {
@@ -278,5 +280,9 @@ b a {
     .description {
         line-height: 20px;
         flex-direction: column;
+    }
+
+    .box {
+        border-radius: 24px;
     }
 }
