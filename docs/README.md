@@ -1,3 +1,1 @@
-# devinfo
-A webpage with the infos about SkyeTheBot's dev (me)<br>
-https://dev.skyethebot.xyz/
+**DISCONTINUED and moved to [SkyeUwU/skyedoggy.dev](https://github.com/SkyeUwU/skyedoggy.dev)**
